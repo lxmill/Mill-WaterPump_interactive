@@ -29,12 +29,12 @@ millPower = pwmio.PWMOut(board.D8, frequency=5000, duty_cycle=0)
 waterPower = digitalio.DigitalInOut(board.D9)
 waterPower.direction = digitalio.Direction.OUTPUT
 
-THRESHOLD_1 = 500  ## HAS TO BE CALIBRATED WHEN FULLY MOUNTED
+THRESHOLD_1 = 750  ## HAS TO BE CALIBRATED WHEN FULLY MOUNTED
 t1 = touchio.TouchIn(board.D0)
 t1.threshold = t1.raw_value + THRESHOLD_1
 touchpad_1 = Button(t1, value_when_pressed=True)
 
-THRESHOLD_2 = 500  ## HAS TO BE CALIBRATED WHEN FULLY MOUNTED
+THRESHOLD_2 = 750  ## HAS TO BE CALIBRATED WHEN FULLY MOUNTED
 t2 = touchio.TouchIn(board.D1)
 t2.threshold = t2.raw_value + THRESHOLD_2
 touchpad_2 = Button(t2, value_when_pressed=True)
